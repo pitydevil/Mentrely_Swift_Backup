@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E019DBF22EE02780032EA39 /* reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E019DBE22EE02780032EA39 /* reminder.swift */; };
+		0E09B86522E5FF6B0059CB1A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09B86422E5FF6B0059CB1A /* CollectionViewCell.swift */; };
+		0E1B9DB522EDF794001CD6CB /* DailyReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B9DB422EDF794001CD6CB /* DailyReminderTableViewController.swift */; };
+		0E2A304922EB40EC00D5EEC2 /* LogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A304822EB40EC00D5EEC2 /* LogCollectionViewCell.swift */; };
+		0E54BA7222EB18700007209A /* Depression.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7122EB18700007209A /* Depression.storyboard */; };
+		0E54BA7422EB18970007209A /* Scizophrenia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7322EB18970007209A /* Scizophrenia.storyboard */; };
+		0E54BA7622EB18A70007209A /* Hyperactivity Disorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7522EB18A70007209A /* Hyperactivity Disorder.storyboard */; };
+		0E54BA7822EB18B30007209A /* Bipolar Disorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7722EB18B30007209A /* Bipolar Disorder.storyboard */; };
+		0E54BA7A22EB18BB0007209A /* OCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7922EB18BB0007209A /* OCD.storyboard */; };
+		0E54BA7C22EB18D30007209A /* Post Traumatic Stress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7B22EB18D30007209A /* Post Traumatic Stress.storyboard */; };
+		0E6B883322E48F360077201C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B883222E48F360077201C /* AppDelegate.swift */; };
+		0E6B883522E48F360077201C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B883422E48F360077201C /* ViewController.swift */; };
+		0E6B883822E48F360077201C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B883622E48F360077201C /* Main.storyboard */; };
+		0E6B883A22E48F370077201C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B883922E48F370077201C /* Assets.xcassets */; };
+		0E6B883D22E48F370077201C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B883B22E48F370077201C /* LaunchScreen.storyboard */; };
+		0E73FC3122EF0F3700357AEE /* animateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73FC3022EF0F3700357AEE /* animateButton.swift */; };
+		0E73FC3622EF239900357AEE /* Hospital.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E73FC3522EF239900357AEE /* Hospital.storyboard */; };
+		0EA221EC22E4A99A000CAB98 /* Need Help?.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA221EB22E4A99A000CAB98 /* Need Help?.storyboard */; };
+		0EA221EE22E4A9C0000CAB98 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA221ED22E4A9C0000CAB98 /* About.storyboard */; };
+		0EA221F022E4AA1E000CAB98 /* Issues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA221EF22E4AA1E000CAB98 /* Issues.storyboard */; };
+		0EAA1BEF22E767DB00E130CA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA1BEE22E767DB00E130CA /* TableViewController.swift */; };
+		0EAA1BF122E774D600E130CA /* Autism.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAA1BF022E774D600E130CA /* Autism.storyboard */; };
+		0EEF01E922EA07D800057F98 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF01E722EA07D800057F98 /* TableViewCell.swift */; };
+		0EEF01EA22EA07D800057F98 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EEF01E822EA07D800057F98 /* TableViewCell.xib */; };
+		6032C57A05375C74C1DE4205 /* Pods_Mentrely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFE9371092F1E5117B6C353 /* Pods_Mentrely.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E019DBE22EE02780032EA39 /* reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reminder.swift; sourceTree = "<group>"; };
+		0E09B86422E5FF6B0059CB1A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		0E1B9DB422EDF794001CD6CB /* DailyReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReminderTableViewController.swift; sourceTree = "<group>"; };
+		0E2A304822EB40EC00D5EEC2 /* LogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E54BA7122EB18700007209A /* Depression.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Depression.storyboard; sourceTree = "<group>"; };
+		0E54BA7322EB18970007209A /* Scizophrenia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scizophrenia.storyboard; sourceTree = "<group>"; };
+		0E54BA7522EB18A70007209A /* Hyperactivity Disorder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Hyperactivity Disorder.storyboard"; sourceTree = "<group>"; };
+		0E54BA7722EB18B30007209A /* Bipolar Disorder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Bipolar Disorder.storyboard"; sourceTree = "<group>"; };
+		0E54BA7922EB18BB0007209A /* OCD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OCD.storyboard; sourceTree = "<group>"; };
+		0E54BA7B22EB18D30007209A /* Post Traumatic Stress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Post Traumatic Stress.storyboard"; sourceTree = "<group>"; };
+		0E6B882F22E48F360077201C /* Mentrely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mentrely.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6B883222E48F360077201C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0E6B883422E48F360077201C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E6B883722E48F360077201C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E6B883922E48F370077201C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E6B883C22E48F370077201C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E6B883E22E48F370077201C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E73FC3022EF0F3700357AEE /* animateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animateButton.swift; sourceTree = "<group>"; };
+		0E73FC3522EF239900357AEE /* Hospital.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hospital.storyboard; sourceTree = "<group>"; };
+		0EA221EB22E4A99A000CAB98 /* Need Help?.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Need Help?.storyboard"; sourceTree = "<group>"; };
+		0EA221ED22E4A9C0000CAB98 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		0EA221EF22E4AA1E000CAB98 /* Issues.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Issues.storyboard; sourceTree = "<group>"; };
+		0EAA1BEE22E767DB00E130CA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0EAA1BF022E774D600E130CA /* Autism.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Autism.storyboard; sourceTree = "<group>"; };
+		0EEF01E722EA07D800057F98 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0EEF01E822EA07D800057F98 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		1FFE9371092F1E5117B6C353 /* Pods_Mentrely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mentrely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		506C2B5E786AF8C52A795E55 /* Pods-Mentrely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mentrely.debug.xcconfig"; path = "Target Support Files/Pods-Mentrely/Pods-Mentrely.debug.xcconfig"; sourceTree = "<group>"; };
+		E417EDB5F9A713B346B49874 /* Pods-Mentrely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mentrely.release.xcconfig"; path = "Target Support Files/Pods-Mentrely/Pods-Mentrely.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E6B882C22E48F360077201C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6032C57A05375C74C1DE4205 /* Pods_Mentrely.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06D38E413E1446800E2BF6B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				506C2B5E786AF8C52A795E55 /* Pods-Mentrely.debug.xcconfig */,
+				E417EDB5F9A713B346B49874 /* Pods-Mentrely.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		0C93E94A59A794BDDDBF6B96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FFE9371092F1E5117B6C353 /* Pods_Mentrely.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E019DBD22EE024D0032EA39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E019DBE22EE02780032EA39 /* reminder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E6B882622E48F360077201C = {
+			isa = PBXGroup;
+			children = (
+				0E6B883122E48F360077201C /* Mentrely */,
+				0E6B883022E48F360077201C /* Products */,
+				06D38E413E1446800E2BF6B7 /* Pods */,
+				0C93E94A59A794BDDDBF6B96 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0E6B883022E48F360077201C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E6B882F22E48F360077201C /* Mentrely.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E6B883122E48F360077201C /* Mentrely */ = {
+			isa = PBXGroup;
+			children = (
+				0E019DBD22EE024D0032EA39 /* Model */,
+				0E6B883222E48F360077201C /* AppDelegate.swift */,
+				0E73FC3022EF0F3700357AEE /* animateButton.swift */,
+				0E82EF8422E9FC780055BE84 /* tableCell */,
+				0E09B86422E5FF6B0059CB1A /* CollectionViewCell.swift */,
+				0EAA1BEE22E767DB00E130CA /* TableViewController.swift */,
+				0E2A304822EB40EC00D5EEC2 /* LogCollectionViewCell.swift */,
+				0E1B9DB422EDF794001CD6CB /* DailyReminderTableViewController.swift */,
+				0E6B883422E48F360077201C /* ViewController.swift */,
+				0E6B883922E48F370077201C /* Assets.xcassets */,
+				0EA221EA22E4A975000CAB98 /* View */,
+				0E6B883B22E48F370077201C /* LaunchScreen.storyboard */,
+				0E6B883E22E48F370077201C /* Info.plist */,
+			);
+			path = Mentrely;
+			sourceTree = "<group>";
+		};
+		0E73FC3422EF237B00357AEE /* Hospital  */ = {
+			isa = PBXGroup;
+			children = (
+				0E73FC3522EF239900357AEE /* Hospital.storyboard */,
+			);
+			path = "Hospital ";
+			sourceTree = "<group>";
+		};
+		0E82EF8422E9FC780055BE84 /* tableCell */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF01E722EA07D800057F98 /* TableViewCell.swift */,
+				0EEF01E822EA07D800057F98 /* TableViewCell.xib */,
+			);
+			path = tableCell;
+			sourceTree = "<group>";
+		};
+		0EA221EA22E4A975000CAB98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E73FC3422EF237B00357AEE /* Hospital  */,
+				0E6B883622E48F360077201C /* Main.storyboard */,
+				0EA221EB22E4A99A000CAB98 /* Need Help?.storyboard */,
+				0EA221EF22E4AA1E000CAB98 /* Issues.storyboard */,
+				0EA221ED22E4A9C0000CAB98 /* About.storyboard */,
+				0EAA1BF022E774D600E130CA /* Autism.storyboard */,
+				0E54BA7122EB18700007209A /* Depression.storyboard */,
+				0E54BA7322EB18970007209A /* Scizophrenia.storyboard */,
+				0E54BA7522EB18A70007209A /* Hyperactivity Disorder.storyboard */,
+				0E54BA7722EB18B30007209A /* Bipolar Disorder.storyboard */,
+				0E54BA7922EB18BB0007209A /* OCD.storyboard */,
+				0E54BA7B22EB18D30007209A /* Post Traumatic Stress.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E6B882E22E48F360077201C /* Mentrely */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E6B884122E48F370077201C /* Build configuration list for PBXNativeTarget "Mentrely" */;
+			buildPhases = (
+				3379982C9C8E0F6656D7460A /* [CP] Check Pods Manifest.lock */,
+				0E6B882B22E48F360077201C /* Sources */,
+				0E6B882C22E48F360077201C /* Frameworks */,
+				0E6B882D22E48F360077201C /* Resources */,
+				EE3B78F04239F1A78A003F99 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mentrely;
+			productName = Mentrely;
+			productReference = 0E6B882F22E48F360077201C /* Mentrely.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E6B882722E48F360077201C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Mikhael Adiputra";
+				TargetAttributes = {
+					0E6B882E22E48F360077201C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 0E6B882A22E48F360077201C /* Build configuration list for PBXProject "Mentrely" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E6B882622E48F360077201C;
+			productRefGroup = 0E6B883022E48F360077201C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E6B882E22E48F360077201C /* Mentrely */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E6B882D22E48F360077201C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EA221EC22E4A99A000CAB98 /* Need Help?.storyboard in Resources */,
+				0E54BA7A22EB18BB0007209A /* OCD.storyboard in Resources */,
+				0E54BA7222EB18700007209A /* Depression.storyboard in Resources */,
+				0E54BA7622EB18A70007209A /* Hyperactivity Disorder.storyboard in Resources */,
+				0E73FC3622EF239900357AEE /* Hospital.storyboard in Resources */,
+				0EA221EE22E4A9C0000CAB98 /* About.storyboard in Resources */,
+				0EA221F022E4AA1E000CAB98 /* Issues.storyboard in Resources */,
+				0EAA1BF122E774D600E130CA /* Autism.storyboard in Resources */,
+				0E6B883D22E48F370077201C /* LaunchScreen.storyboard in Resources */,
+				0E54BA7C22EB18D30007209A /* Post Traumatic Stress.storyboard in Resources */,
+				0EEF01EA22EA07D800057F98 /* TableViewCell.xib in Resources */,
+				0E6B883A22E48F370077201C /* Assets.xcassets in Resources */,
+				0E6B883822E48F360077201C /* Main.storyboard in Resources */,
+				0E54BA7422EB18970007209A /* Scizophrenia.storyboard in Resources */,
+				0E54BA7822EB18B30007209A /* Bipolar Disorder.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3379982C9C8E0F6656D7460A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mentrely-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE3B78F04239F1A78A003F99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mentrely/Pods-Mentrely-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mentrely/Pods-Mentrely-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mentrely/Pods-Mentrely-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E6B882B22E48F360077201C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EEF01E922EA07D800057F98 /* TableViewCell.swift in Sources */,
+				0E1B9DB522EDF794001CD6CB /* DailyReminderTableViewController.swift in Sources */,
+				0E2A304922EB40EC00D5EEC2 /* LogCollectionViewCell.swift in Sources */,
+				0E6B883522E48F360077201C /* ViewController.swift in Sources */,
+				0E73FC3122EF0F3700357AEE /* animateButton.swift in Sources */,
+				0E6B883322E48F360077201C /* AppDelegate.swift in Sources */,
+				0E09B86522E5FF6B0059CB1A /* CollectionViewCell.swift in Sources */,
+				0EAA1BEF22E767DB00E130CA /* TableViewController.swift in Sources */,
+				0E019DBF22EE02780032EA39 /* reminder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0E6B883622E48F360077201C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E6B883722E48F360077201C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0E6B883B22E48F370077201C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E6B883C22E48F370077201C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E6B883F22E48F370077201C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0E6B884022E48F370077201C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E6B884222E48F370077201C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 506C2B5E786AF8C52A795E55 /* Pods-Mentrely.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3D48AN6ZJ;
+				INFOPLIST_FILE = Mentrely/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikhaeladiputra.Mentrely;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0E6B884322E48F370077201C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E417EDB5F9A713B346B49874 /* Pods-Mentrely.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3D48AN6ZJ;
+				INFOPLIST_FILE = Mentrely/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikhaeladiputra.Mentrely;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E6B882A22E48F360077201C /* Build configuration list for PBXProject "Mentrely" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6B883F22E48F370077201C /* Debug */,
+				0E6B884022E48F370077201C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E6B884122E48F370077201C /* Build configuration list for PBXNativeTarget "Mentrely" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E6B884222E48F370077201C /* Debug */,
+				0E6B884322E48F370077201C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E6B882722E48F360077201C /* Project object */;
+}

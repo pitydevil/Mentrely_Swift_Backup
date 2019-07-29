@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xjI-9U-kyT">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mental Issues-->
+        <scene sceneID="Kuz-4F-UQf">
+            <objects>
+                <tableViewController id="M1X-UB-gEx" customClass="TableViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XW8-zc-TRe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="issuesCell" id="rAo-Zp-cmt" customClass="issuesCell">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rAo-Zp-cmt" id="bam-z5-nNB">
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M1X-UB-gEx" id="YGL-3y-2Cw"/>
+                            <outlet property="delegate" destination="M1X-UB-gEx" id="rFH-RO-zE0"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Issues" image="icons8-psychology-30" id="oQk-pT-qsJ"/>
+                    <navigationItem key="navigationItem" title="Mental Issues" id="cMj-b6-awb"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="Z2f-Hf-fc3" kind="show" identifier="goToAutism" id="xk5-0a-Wqe"/>
+                        <segue destination="lWs-EJ-KRJ" kind="show" identifier="goToDepression" id="ryi-v4-75A"/>
+                        <segue destination="v5y-49-Uwr" kind="show" identifier="goToScizophrenia" id="afT-Nq-KqJ"/>
+                        <segue destination="idi-l0-rCk" kind="show" identifier="goToHyper" id="2Ik-sK-qGO"/>
+                        <segue destination="XTd-Bz-Zf5" kind="show" identifier="goToBipolar" id="siS-td-TAb"/>
+                        <segue destination="mf5-vH-w16" kind="show" identifier="goToOCD" id="6VS-jW-luF"/>
+                        <segue destination="FhC-15-0ol" kind="show" identifier="goToPost" id="maN-IG-yaF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCc-8K-7jB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="507" y="-96"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ixC-fI-BDV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xjI-9U-kyT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="bHT-Pj-wHg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M1X-UB-gEx" kind="relationship" relationship="rootViewController" id="Wfa-2e-Msw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnN-D2-DyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-441" y="-96"/>
+        </scene>
+        <!--Scizophrenia-->
+        <scene sceneID="LKd-hs-nVT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Scizophrenia" id="v5y-49-Uwr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUC-aO-QJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="-155"/>
+        </scene>
+        <!--Autism-->
+        <scene sceneID="P5F-oH-WLI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Autism" id="Z2f-Hf-fc3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXp-vz-MBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="-253"/>
+        </scene>
+        <!--Depression-->
+        <scene sceneID="sel-NS-NaK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Depression" id="lWs-EJ-KRJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELd-7R-ywS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1167" y="-204"/>
+        </scene>
+        <!--OCD-->
+        <scene sceneID="YvB-by-niA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OCD" id="mf5-vH-w16" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUL-vB-umV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="3"/>
+        </scene>
+        <!--Post Traumatic Stress-->
+        <scene sceneID="LXO-VA-lYZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Post Traumatic Stress" id="FhC-15-0ol" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Hn-kQ-iWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="44"/>
+        </scene>
+        <!--Hyperactivity Disorder-->
+        <scene sceneID="PXJ-Fs-Ls0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Hyperactivity Disorder" id="idi-l0-rCk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdZ-ed-sUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217" y="-109"/>
+        </scene>
+        <!--Bipolar Disorder-->
+        <scene sceneID="0V9-jp-Ezq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Bipolar Disorder" id="XTd-Bz-Zf5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pa6-6B-qIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="-62"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-psychology-30" width="30" height="30"/>
+    </resources>
+</document>
