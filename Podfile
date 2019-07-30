@@ -14,6 +14,9 @@ target 'Mentrely' do
    pod 'SwiftyJSON'
    pod 'RealmSwift'
    pod 'SwipeCellKit'
-   pod 'ESPullToRefresh'
+   pod 'GooglePlaces'
+   pod 'GoogleMaps'
+   
+
 
 end

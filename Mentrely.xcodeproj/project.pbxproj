@@ -17,6 +17,8 @@
 		0E54BA7822EB18B30007209A /* Bipolar Disorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7722EB18B30007209A /* Bipolar Disorder.storyboard */; };
 		0E54BA7A22EB18BB0007209A /* OCD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7922EB18BB0007209A /* OCD.storyboard */; };
 		0E54BA7C22EB18D30007209A /* Post Traumatic Stress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7B22EB18D30007209A /* Post Traumatic Stress.storyboard */; };
+		0E56AF9122F05AC6006D95AB /* AutismViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56AF9022F05AC6006D95AB /* AutismViewController.swift */; };
+		0E56AF9422F05E44006D95AB /* AutismCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56AF9322F05E44006D95AB /* AutismCollectionViewCell.swift */; };
 		0E6B883322E48F360077201C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B883222E48F360077201C /* AppDelegate.swift */; };
 		0E6B883522E48F360077201C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B883422E48F360077201C /* ViewController.swift */; };
 		0E6B883822E48F360077201C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B883622E48F360077201C /* Main.storyboard */; };
@@ -24,6 +26,7 @@
 		0E6B883D22E48F370077201C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B883B22E48F370077201C /* LaunchScreen.storyboard */; };
 		0E73FC3122EF0F3700357AEE /* animateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73FC3022EF0F3700357AEE /* animateButton.swift */; };
 		0E73FC3622EF239900357AEE /* Hospital.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E73FC3522EF239900357AEE /* Hospital.storyboard */; };
+		0E73FC3C22EF2C1800357AEE /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73FC3B22EF2C1800357AEE /* HospitalViewController.swift */; };
 		0EA221EC22E4A99A000CAB98 /* Need Help?.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA221EB22E4A99A000CAB98 /* Need Help?.storyboard */; };
 		0EA221EE22E4A9C0000CAB98 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA221ED22E4A9C0000CAB98 /* About.storyboard */; };
 		0EA221F022E4AA1E000CAB98 /* Issues.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA221EF22E4AA1E000CAB98 /* Issues.storyboard */; };
@@ -45,6 +48,8 @@
 		0E54BA7722EB18B30007209A /* Bipolar Disorder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Bipolar Disorder.storyboard"; sourceTree = "<group>"; };
 		0E54BA7922EB18BB0007209A /* OCD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OCD.storyboard; sourceTree = "<group>"; };
 		0E54BA7B22EB18D30007209A /* Post Traumatic Stress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Post Traumatic Stress.storyboard"; sourceTree = "<group>"; };
+		0E56AF9022F05AC6006D95AB /* AutismViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutismViewController.swift; sourceTree = "<group>"; };
+		0E56AF9322F05E44006D95AB /* AutismCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutismCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E6B882F22E48F360077201C /* Mentrely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mentrely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6B883222E48F360077201C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E6B883422E48F360077201C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		0E6B883E22E48F370077201C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E73FC3022EF0F3700357AEE /* animateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animateButton.swift; sourceTree = "<group>"; };
 		0E73FC3522EF239900357AEE /* Hospital.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hospital.storyboard; sourceTree = "<group>"; };
+		0E73FC3B22EF2C1800357AEE /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
 		0EA221EB22E4A99A000CAB98 /* Need Help?.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Need Help?.storyboard"; sourceTree = "<group>"; };
 		0EA221ED22E4A9C0000CAB98 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		0EA221EF22E4AA1E000CAB98 /* Issues.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Issues.storyboard; sourceTree = "<group>"; };
@@ -103,6 +109,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0E56AF8F22F05AA1006D95AB /* Mental Issues */ = {
+			isa = PBXGroup;
+			children = (
+				0E56AF9222F05DF7006D95AB /* Autism Collection View */,
+				0E56AF9022F05AC6006D95AB /* AutismViewController.swift */,
+			);
+			path = "Mental Issues";
+			sourceTree = "<group>";
+		};
+		0E56AF9222F05DF7006D95AB /* Autism Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				0E56AF9322F05E44006D95AB /* AutismCollectionViewCell.swift */,
+			);
+			path = "Autism Collection View";
+			sourceTree = "<group>";
+		};
 		0E6B882622E48F360077201C = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +150,8 @@
 				0E019DBD22EE024D0032EA39 /* Model */,
 				0E6B883222E48F360077201C /* AppDelegate.swift */,
 				0E73FC3022EF0F3700357AEE /* animateButton.swift */,
+				0E73FC3722EF2BD700357AEE /* Controller */,
 				0E82EF8422E9FC780055BE84 /* tableCell */,
-				0E09B86422E5FF6B0059CB1A /* CollectionViewCell.swift */,
-				0EAA1BEE22E767DB00E130CA /* TableViewController.swift */,
-				0E2A304822EB40EC00D5EEC2 /* LogCollectionViewCell.swift */,
-				0E1B9DB422EDF794001CD6CB /* DailyReminderTableViewController.swift */,
-				0E6B883422E48F360077201C /* ViewController.swift */,
 				0E6B883922E48F370077201C /* Assets.xcassets */,
 				0EA221EA22E4A975000CAB98 /* View */,
 				0E6B883B22E48F370077201C /* LaunchScreen.storyboard */,
@@ -145,6 +164,28 @@
 			isa = PBXGroup;
 			children = (
 				0E73FC3522EF239900357AEE /* Hospital.storyboard */,
+			);
+			path = "Hospital ";
+			sourceTree = "<group>";
+		};
+		0E73FC3722EF2BD700357AEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E56AF8F22F05AA1006D95AB /* Mental Issues */,
+				0E73FC3822EF2BEF00357AEE /* Hospital  */,
+				0E09B86422E5FF6B0059CB1A /* CollectionViewCell.swift */,
+				0EAA1BEE22E767DB00E130CA /* TableViewController.swift */,
+				0E2A304822EB40EC00D5EEC2 /* LogCollectionViewCell.swift */,
+				0E1B9DB422EDF794001CD6CB /* DailyReminderTableViewController.swift */,
+				0E6B883422E48F360077201C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0E73FC3822EF2BEF00357AEE /* Hospital  */ = {
+			isa = PBXGroup;
+			children = (
+				0E73FC3B22EF2C1800357AEE /* HospitalViewController.swift */,
 			);
 			path = "Hospital ";
 			sourceTree = "<group>";
@@ -189,6 +230,7 @@
 				0E6B882C22E48F360077201C /* Frameworks */,
 				0E6B882D22E48F360077201C /* Resources */,
 				EE3B78F04239F1A78A003F99 /* [CP] Embed Pods Frameworks */,
+				D92CF3FE2BE16A61CAA86637 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +322,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D92CF3FE2BE16A61CAA86637 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mentrely/Pods-Mentrely-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mentrely/Pods-Mentrely-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mentrely/Pods-Mentrely-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EE3B78F04239F1A78A003F99 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,11 +367,14 @@
 				0E1B9DB522EDF794001CD6CB /* DailyReminderTableViewController.swift in Sources */,
 				0E2A304922EB40EC00D5EEC2 /* LogCollectionViewCell.swift in Sources */,
 				0E6B883522E48F360077201C /* ViewController.swift in Sources */,
+				0E73FC3C22EF2C1800357AEE /* HospitalViewController.swift in Sources */,
 				0E73FC3122EF0F3700357AEE /* animateButton.swift in Sources */,
 				0E6B883322E48F360077201C /* AppDelegate.swift in Sources */,
 				0E09B86522E5FF6B0059CB1A /* CollectionViewCell.swift in Sources */,
 				0EAA1BEF22E767DB00E130CA /* TableViewController.swift in Sources */,
+				0E56AF9122F05AC6006D95AB /* AutismViewController.swift in Sources */,
 				0E019DBF22EE02780032EA39 /* reminder.swift in Sources */,
+				0E56AF9422F05E44006D95AB /* AutismCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

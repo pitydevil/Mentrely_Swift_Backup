@@ -87,7 +87,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let realm = try! Realm()
 
    
-    
+
     
 
 
@@ -126,9 +126,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     func getQuotes () {
 
-        DispatchQueue.main.async {
-            SVProgressHUD.show(withStatus: "Loading")
-            }
+        SVProgressHUD.show(withStatus: "Loading")
+
 
         Alamofire.request(quoteURL, method: .get ).responseJSON { (response) in
 
@@ -175,11 +174,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
             } else {
 
-            return reminderRealm?.count ?? 1
+                if reminderRealm!.count < 3 {
+
+                    return reminderRealm?.count ?? 1
+
+                } else  {
+
+                return 3
             }
-
-
-
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

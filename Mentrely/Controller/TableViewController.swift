@@ -19,19 +19,24 @@ class TableViewController: UITableViewController {
 
       tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "labelMental")
       tableView.rowHeight = 50
-
+      tableView.separatorStyle = .none
 
  
     }
 
+    override func viewDidAppear(_ animated: Bool) {
 
+        let layer = CAGradientLayer()
+        layer.frame = tableView.bounds
+        layer.colors = [UIColor.purple.cgColor, UIColor.orange.cgColor]
+        layer.startPoint = CGPoint(x: 0.8,y: 0)
+        layer.endPoint = CGPoint (x: 1,y: 1)
+        tableView.layer.insertSublayer(layer, at: 0)
+    }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 01
-    }
+
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -43,14 +48,15 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "labelMental", for: indexPath) as! TableViewCell
 
         cell.labelMental.text = issuesArray[indexPath.row]
-        cell.imageMental.image = UIImage(named: "home")
 
-    
+
+
+
+
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
 
         performSegue(withIdentifier: segueIdentifier[indexPath.row], sender: self)
 
