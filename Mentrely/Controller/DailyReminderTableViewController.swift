@@ -21,7 +21,8 @@ let realm = try! Realm()
 
             loadItems()
             tableView.rowHeight = 60
-            tableView.separatorStyle = .none
+            searchBar.barTintColor = UIColor.purple
+           
     }
     
 
@@ -37,14 +38,43 @@ let realm = try! Realm()
         cell.delegate = self
         cell.textLabel?.text = reminderRealm?[indexPath.row].daily ?? "Add a daily Reminder"
 
+        if reminderRealm?[indexPath.item].done == true {
 
+            cell.accessoryType = .checkmark
+
+        } else {
+
+            cell.accessoryType = .none
+        }
 
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+            do {
+                 try realm.write {
+
+                if reminderRealm?[indexPath.item].done == false {
+
+                    reminderRealm?[indexPath.item].done = true
+
+                    print("trued")
+
+                    } else {
+
+               reminderRealm?[indexPath.item].done = false
+
+                    print("falsed")
+                            }
+                        }
+                    } catch {
+                print("error \(error)")
+
+                }
+
+                tableView.reloadData()
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }

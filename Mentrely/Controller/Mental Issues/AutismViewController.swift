@@ -16,6 +16,9 @@ class AutismViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var consult: UIButton!
     private var imageArray : [UIImage] = [UIImage(named: "chat.png")!, UIImage(named: "delete.png")!]
 
+    @IBOutlet weak var titleView: UILabel!
+    @IBOutlet weak var penjelasanText: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +31,14 @@ class AutismViewController: UIViewController, UICollectionViewDelegate, UICollec
       self.consult.layer.shadowOpacity = 0.8
       self.consult.layer.shadowRadius = 0.2
       self.consult.layer.shadowOffset = CGSize(width: 2, height: 2)
+    penjelasanText.layer.cornerRadius = 10
+    penjelasanText.layer.borderWidth = 0.8
+    penjelasanText.layer.borderColor = UIColor.brown.cgColor
+    titleView.layer.cornerRadius = 10
+    titleView.layer.borderWidth  = 1.0
+    titleView.backgroundColor = UIColor.orange
+
+
 
     }
 

@@ -13,5 +13,6 @@ class reminder: Object {
 
 @objc dynamic var daily : String = ""
 @objc dynamic var date : Date?
+@objc dynamic var done : Bool = false
 
 }

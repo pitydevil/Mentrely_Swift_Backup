@@ -11,6 +11,7 @@
 		0E09B86522E5FF6B0059CB1A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E09B86422E5FF6B0059CB1A /* CollectionViewCell.swift */; };
 		0E1B9DB522EDF794001CD6CB /* DailyReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1B9DB422EDF794001CD6CB /* DailyReminderTableViewController.swift */; };
 		0E2A304922EB40EC00D5EEC2 /* LogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A304822EB40EC00D5EEC2 /* LogCollectionViewCell.swift */; };
+		0E3A6AB122F1F1DA0069AF03 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3A6AB022F1F1DA0069AF03 /* CoreLocation.framework */; };
 		0E54BA7222EB18700007209A /* Depression.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7122EB18700007209A /* Depression.storyboard */; };
 		0E54BA7422EB18970007209A /* Scizophrenia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7322EB18970007209A /* Scizophrenia.storyboard */; };
 		0E54BA7622EB18A70007209A /* Hyperactivity Disorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54BA7522EB18A70007209A /* Hyperactivity Disorder.storyboard */; };
@@ -25,7 +26,6 @@
 		0E6B883A22E48F370077201C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B883922E48F370077201C /* Assets.xcassets */; };
 		0E6B883D22E48F370077201C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B883B22E48F370077201C /* LaunchScreen.storyboard */; };
 		0E73FC3122EF0F3700357AEE /* animateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73FC3022EF0F3700357AEE /* animateButton.swift */; };
-		0E73FC3622EF239900357AEE /* Hospital.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E73FC3522EF239900357AEE /* Hospital.storyboard */; };
 		0E73FC3C22EF2C1800357AEE /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E73FC3B22EF2C1800357AEE /* HospitalViewController.swift */; };
 		0EA221EC22E4A99A000CAB98 /* Need Help?.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA221EB22E4A99A000CAB98 /* Need Help?.storyboard */; };
 		0EA221EE22E4A9C0000CAB98 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA221ED22E4A9C0000CAB98 /* About.storyboard */; };
@@ -33,7 +33,6 @@
 		0EAA1BEF22E767DB00E130CA /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA1BEE22E767DB00E130CA /* TableViewController.swift */; };
 		0EAA1BF122E774D600E130CA /* Autism.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAA1BF022E774D600E130CA /* Autism.storyboard */; };
 		0EEF01E922EA07D800057F98 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF01E722EA07D800057F98 /* TableViewCell.swift */; };
-		0EEF01EA22EA07D800057F98 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EEF01E822EA07D800057F98 /* TableViewCell.xib */; };
 		6032C57A05375C74C1DE4205 /* Pods_Mentrely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFE9371092F1E5117B6C353 /* Pods_Mentrely.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +41,7 @@
 		0E09B86422E5FF6B0059CB1A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		0E1B9DB422EDF794001CD6CB /* DailyReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReminderTableViewController.swift; sourceTree = "<group>"; };
 		0E2A304822EB40EC00D5EEC2 /* LogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E3A6AB022F1F1DA0069AF03 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0E54BA7122EB18700007209A /* Depression.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Depression.storyboard; sourceTree = "<group>"; };
 		0E54BA7322EB18970007209A /* Scizophrenia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scizophrenia.storyboard; sourceTree = "<group>"; };
 		0E54BA7522EB18A70007209A /* Hyperactivity Disorder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Hyperactivity Disorder.storyboard"; sourceTree = "<group>"; };
@@ -58,7 +58,6 @@
 		0E6B883C22E48F370077201C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E6B883E22E48F370077201C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E73FC3022EF0F3700357AEE /* animateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animateButton.swift; sourceTree = "<group>"; };
-		0E73FC3522EF239900357AEE /* Hospital.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hospital.storyboard; sourceTree = "<group>"; };
 		0E73FC3B22EF2C1800357AEE /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
 		0EA221EB22E4A99A000CAB98 /* Need Help?.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Need Help?.storyboard"; sourceTree = "<group>"; };
 		0EA221ED22E4A9C0000CAB98 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 		0EAA1BEE22E767DB00E130CA /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0EAA1BF022E774D600E130CA /* Autism.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Autism.storyboard; sourceTree = "<group>"; };
 		0EEF01E722EA07D800057F98 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		0EEF01E822EA07D800057F98 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		1FFE9371092F1E5117B6C353 /* Pods_Mentrely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mentrely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		506C2B5E786AF8C52A795E55 /* Pods-Mentrely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mentrely.debug.xcconfig"; path = "Target Support Files/Pods-Mentrely/Pods-Mentrely.debug.xcconfig"; sourceTree = "<group>"; };
 		E417EDB5F9A713B346B49874 /* Pods-Mentrely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mentrely.release.xcconfig"; path = "Target Support Files/Pods-Mentrely/Pods-Mentrely.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E3A6AB122F1F1DA0069AF03 /* CoreLocation.framework in Frameworks */,
 				6032C57A05375C74C1DE4205 /* Pods_Mentrely.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +95,7 @@
 		0C93E94A59A794BDDDBF6B96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E3A6AB022F1F1DA0069AF03 /* CoreLocation.framework */,
 				1FFE9371092F1E5117B6C353 /* Pods_Mentrely.framework */,
 			);
 			name = Frameworks;
@@ -151,7 +151,6 @@
 				0E6B883222E48F360077201C /* AppDelegate.swift */,
 				0E73FC3022EF0F3700357AEE /* animateButton.swift */,
 				0E73FC3722EF2BD700357AEE /* Controller */,
-				0E82EF8422E9FC780055BE84 /* tableCell */,
 				0E6B883922E48F370077201C /* Assets.xcassets */,
 				0EA221EA22E4A975000CAB98 /* View */,
 				0E6B883B22E48F370077201C /* LaunchScreen.storyboard */,
@@ -160,24 +159,16 @@
 			path = Mentrely;
 			sourceTree = "<group>";
 		};
-		0E73FC3422EF237B00357AEE /* Hospital  */ = {
-			isa = PBXGroup;
-			children = (
-				0E73FC3522EF239900357AEE /* Hospital.storyboard */,
-			);
-			path = "Hospital ";
-			sourceTree = "<group>";
-		};
 		0E73FC3722EF2BD700357AEE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				0E56AF8F22F05AA1006D95AB /* Mental Issues */,
 				0E73FC3822EF2BEF00357AEE /* Hospital  */,
 				0E09B86422E5FF6B0059CB1A /* CollectionViewCell.swift */,
-				0EAA1BEE22E767DB00E130CA /* TableViewController.swift */,
 				0E2A304822EB40EC00D5EEC2 /* LogCollectionViewCell.swift */,
 				0E1B9DB422EDF794001CD6CB /* DailyReminderTableViewController.swift */,
 				0E6B883422E48F360077201C /* ViewController.swift */,
+				0E88799322F4305D002F9394 /* Issues Table View */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,19 +181,18 @@
 			path = "Hospital ";
 			sourceTree = "<group>";
 		};
-		0E82EF8422E9FC780055BE84 /* tableCell */ = {
+		0E88799322F4305D002F9394 /* Issues Table View */ = {
 			isa = PBXGroup;
 			children = (
+				0EAA1BEE22E767DB00E130CA /* TableViewController.swift */,
 				0EEF01E722EA07D800057F98 /* TableViewCell.swift */,
-				0EEF01E822EA07D800057F98 /* TableViewCell.xib */,
 			);
-			path = tableCell;
+			path = "Issues Table View";
 			sourceTree = "<group>";
 		};
 		0EA221EA22E4A975000CAB98 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0E73FC3422EF237B00357AEE /* Hospital  */,
 				0E6B883622E48F360077201C /* Main.storyboard */,
 				0EA221EB22E4A99A000CAB98 /* Need Help?.storyboard */,
 				0EA221EF22E4AA1E000CAB98 /* Issues.storyboard */,
@@ -283,13 +273,11 @@
 				0E54BA7A22EB18BB0007209A /* OCD.storyboard in Resources */,
 				0E54BA7222EB18700007209A /* Depression.storyboard in Resources */,
 				0E54BA7622EB18A70007209A /* Hyperactivity Disorder.storyboard in Resources */,
-				0E73FC3622EF239900357AEE /* Hospital.storyboard in Resources */,
 				0EA221EE22E4A9C0000CAB98 /* About.storyboard in Resources */,
 				0EA221F022E4AA1E000CAB98 /* Issues.storyboard in Resources */,
 				0EAA1BF122E774D600E130CA /* Autism.storyboard in Resources */,
 				0E6B883D22E48F370077201C /* LaunchScreen.storyboard in Resources */,
 				0E54BA7C22EB18D30007209A /* Post Traumatic Stress.storyboard in Resources */,
-				0EEF01EA22EA07D800057F98 /* TableViewCell.xib in Resources */,
 				0E6B883A22E48F370077201C /* Assets.xcassets in Resources */,
 				0E6B883822E48F360077201C /* Main.storyboard in Resources */,
 				0E54BA7422EB18970007209A /* Scizophrenia.storyboard in Resources */,

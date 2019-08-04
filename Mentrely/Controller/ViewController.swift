@@ -25,7 +25,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
  @IBOutlet weak var newsletterCard: UIView!
  @IBOutlet weak var logCollectionView: UICollectionView!
  @IBOutlet weak var addButton: UIButton!
-  
+ @IBOutlet weak var hospitalButton: UIButton!
+ @IBOutlet weak var liveButton: UIButton!
 
 
     override func viewDidLoad() {
@@ -37,10 +38,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         logCollectionView.delegate   = self
         addButton.layer.cornerRadius = 10
         loadItems()
-       
-
-
-
+        hospitalButton.layer.cornerRadius = 8
+        hospitalButton.layer.shadowRadius = 0.8
+        hospitalButton.layer.shadowOpacity = 0.5
+        hospitalButton.layer.shadowOffset = CGSize(width: 2, height: 2)
+        liveButton.layer.cornerRadius = 8
+        liveButton.layer.shadowRadius = 0.8
+        liveButton.layer.shadowOpacity = 0.5
+        liveButton.layer.shadowOffset = CGSize(width: 1, height: 1)
 
      }
 
@@ -61,9 +66,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cardView.layer.shadowOffset = CGSize(width: 10, height: 10.0)
         diaryCard.layer.cornerRadius = 10
         newsletterCard.layer.cornerRadius = 10
-        self.addButton.layer.shadowOpacity = 1
-        self.addButton.layer.shadowRadius = 0.5
-        self.addButton.layer.shadowOffset = CGSize(width: 2, height: 2)
+        self.addButton.layer.shadowOpacity = 0.6
+        self.addButton.layer.shadowRadius = 0.25
+        self.addButton.layer.shadowOffset = CGSize(width: 3, height: 3)
         reUpdate()
         reUpdate()
         reUpdate()
@@ -71,9 +76,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         reUpdate()
         loadItems()
         fetchButton()
-
-
-
     }
 
 
@@ -81,15 +83,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var quotesArray = [" “Don't cry because it's over, smile because it happened.” "]
     var data = ["sadasd", "sadasd", "asdaa", "aasda"]
     let quoteURL = "https://favqs.com/api/qotd"
-
-    var reminderRealm : Results<reminder>? 
-
+    var reminderRealm : Results<reminder>?
     let realm = try! Realm()
 
    
-
-    
-
 
     func reUpdate () {
 
@@ -98,7 +95,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         for item in quotesArray {
             getQuotes()
         }
-
            } else {
 
             print("Penuh")
@@ -112,15 +108,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             addButton.setTitle("Add", for: .normal)
 
         } else {
-
             addButton.setTitle("Edit", for: .normal)
-
         }
 
     }
-
-
-
 
 //MARK: - GET QUOTE FUNC
 
@@ -173,13 +164,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 return tokohArray.count
 
             } else {
-
                 if reminderRealm!.count < 3 {
-
                     return reminderRealm?.count ?? 1
-
                 } else  {
-
                 return 3
             }
         }
@@ -197,11 +184,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.layer.borderWidth = 3.0
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.shadowColor = UIColor.orange.cgColor
-//        cell.layer.backgroundColor = UIColor.purple.cgColor
         cell.layer.cornerRadius = 10
-     
-
-
 
         return cell
 
@@ -220,14 +203,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 cell.layer.cornerRadius = 10
 
                 }
-
-
-
-
                 return cell
-
                 }
-
             }
 
         func loadItems() {
@@ -236,10 +213,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         reminderRealm = realm.objects(reminder.self)
         collectionView.reloadData()
         logCollectionView.reloadData()
-
-        
         }
-
-
     }
 

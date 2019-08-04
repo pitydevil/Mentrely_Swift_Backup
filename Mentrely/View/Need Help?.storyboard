@@ -36,10 +36,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJv-zP-ncE">
-                                                <rect key="frame" x="97" y="49" width="101" height="32"/>
+                                                <rect key="frame" x="89" y="49" width="117" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.94901960780000005" green="0.5" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="Start live chat"/>
+                                                <state key="normal" title="  Start live chat  ">
+                                                    <color key="titleColor" red="0.99942404029999998" green="0.88781716648904108" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="j1Z-LI-SGZ">
                                                 <rect key="frame" x="8" y="8" width="67" height="94"/>
@@ -48,8 +51,8 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are You Okay?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zua-Mv-ZNx">
                                                 <rect key="frame" x="83" y="17" width="129" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="17"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -63,16 +66,19 @@
                                                 <rect key="frame" x="13" y="16" width="127" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgX-Tu-GhR">
-                                                <rect key="frame" x="14" y="52" width="125" height="32"/>
+                                                <rect key="frame" x="6" y="52" width="141" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.94901960780000005" green="0.73483592283835619" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="Nearby Hospitals"/>
+                                                <state key="normal" title="  Nearby Hospitals  ">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
-                                                    <segue destination="ktj-Jt-QfH" kind="show" id="dHe-cK-Mbh"/>
+                                                    <segue destination="pgC-iP-XJ7" kind="show" id="TTR-V8-eg0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -108,7 +114,7 @@
                                                             <rect key="frame" x="2" y="151" width="243" height="46"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -158,13 +164,12 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rm-vf-J6j">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rm-vf-J6j">
                                                 <rect key="frame" x="325" y="8" width="42" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Edit">
-                                                    <color key="titleColor" red="1" green="0.85515733589999998" blue="0.51977032270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="titleShadowColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.94901960780000005" green="0.79607843140000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="ZEh-s8-anw" kind="show" id="XcP-UV-Kef"/>
@@ -196,6 +201,8 @@
                         <outlet property="collectionView" destination="lH6-Bb-lEj" id="lK5-Pi-NrG"/>
                         <outlet property="diaryCard" destination="MQP-r8-o2v" id="bYC-04-VP2"/>
                         <outlet property="gradientView" destination="VRf-S8-hn4" id="RVo-f1-UoC"/>
+                        <outlet property="hospitalButton" destination="VgX-Tu-GhR" id="765-iQ-muZ"/>
+                        <outlet property="liveButton" destination="AJv-zP-ncE" id="TdM-3y-IfY"/>
                         <outlet property="logCollectionView" destination="baL-RX-yAh" id="IBf-ca-qmP"/>
                         <outlet property="newsletterCard" destination="B8d-uZ-fq9" id="eTm-He-uwP"/>
                         <outlet property="scrollView" destination="ZQi-Kh-Z8B" id="hTC-Bn-oaq"/>
@@ -204,14 +211,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opV-44-fg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="-305.9113300492611"/>
-        </scene>
-        <!--Hospital-->
-        <scene sceneID="oqO-xF-noZ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Hospital" id="ktj-Jt-QfH" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZgH-gg-g2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1986" y="-701"/>
         </scene>
         <!--Daily Reminder-->
         <scene sceneID="Eii-st-oCy">
@@ -260,14 +259,6 @@
             </objects>
             <point key="canvasLocation" x="2142" y="-306"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="MKX-Rg-8tW">
-            <objects>
-                <viewControllerPlaceholder id="ljr-2G-bLs" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ltv-g9-GC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2118" y="76"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ofc-5l-vB4">
             <objects>
@@ -294,6 +285,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQp-qA-Auh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="195.6521739130435" y="-305.35714285714283"/>
+        </scene>
+        <!--Nearest Hospital-->
+        <scene sceneID="beE-ce-44r">
+            <objects>
+                <viewController id="pgC-iP-XJ7" customClass="HospitalViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IxI-zz-5r8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uUu-4X-AZB">
+                                <rect key="frame" x="0.0" y="140" width="375" height="672"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uUu-4X-AZB" firstAttribute="top" secondItem="l3n-aI-3v4" secondAttribute="top" id="Rw8-iA-WJx"/>
+                            <constraint firstItem="uUu-4X-AZB" firstAttribute="leading" secondItem="l3n-aI-3v4" secondAttribute="leading" id="kuM-yf-5aa"/>
+                            <constraint firstItem="uUu-4X-AZB" firstAttribute="trailing" secondItem="l3n-aI-3v4" secondAttribute="trailing" id="pl2-yc-sGh"/>
+                            <constraint firstAttribute="bottom" secondItem="uUu-4X-AZB" secondAttribute="bottom" id="ru9-Oy-DuX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l3n-aI-3v4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="seJ-cB-ZIK"/>
+                    <navigationItem key="navigationItem" title="Nearest Hospital" id="4Yt-Ro-z4k">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="2y9-fu-Jh3">
+                            <connections>
+                                <action selector="searchButton:" destination="pgC-iP-XJ7" id="uJz-rR-CZy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="uUu-4X-AZB" id="mLZ-fz-0G5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBt-KY-96M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142" y="-1137"/>
         </scene>
     </scenes>
     <resources>

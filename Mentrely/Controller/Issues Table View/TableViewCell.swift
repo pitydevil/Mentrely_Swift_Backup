@@ -13,14 +13,16 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+
+        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  
+    @IBOutlet weak var imagePenyakit: UIImageView!
+    @IBOutlet weak var namaPenyakit: UILabel!
+    @IBOutlet weak var namadokter: UILabel!
+    @IBOutlet weak var backgroundCard: UIView!
+    
 
-        // Configure the view for the selected state
-    }
-    @IBOutlet weak var labelMental: UILabel!
-    @IBOutlet weak var imageMental: UIImageView!
     
 }
