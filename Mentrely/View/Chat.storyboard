@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Qv-Vr-G6f">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fullscreen-->
+        <scene sceneID="Jse-rw-dCi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Fullscreen" id="M12-mg-HM2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSt-br-Zd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="-261"/>
+        </scene>
+        <!--Depression View Controller-->
+        <scene sceneID="lz2-1t-Rv5">
+            <objects>
+                <collectionViewController hidesBottomBarWhenPushed="YES" id="6TY-Zb-WiM" customClass="DepressionViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" indicatorStyle="white" bouncesZoom="NO" dataMode="prototypes" id="fGQ-vZ-b6J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Xr-vD-u0e">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4RU-Xz-rb3">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="An7-T0-65T">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6TY-Zb-WiM" id="JH9-jl-Pvg"/>
+                            <outlet property="delegate" destination="6TY-Zb-WiM" id="XSW-8V-Tje"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="iz4-Zg-rxC">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="Chat" id="bo8-z3-q6V"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RLt-5u-gNb">
+                            <rect key="frame" x="74.666666666666686" y="4" width="226" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
+                            <connections>
+                                <action selector="navigationButton:" destination="6TY-Zb-WiM" eventType="touchUpInside" id="5w1-uw-WTe"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navigationButton" destination="RLt-5u-gNb" id="dVn-8b-5eN"/>
+                        <segue destination="KgI-EW-cpf" kind="presentation" identifier="goToPopDepression" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="dzc-x7-uQQ"/>
+                        <segue destination="jid-OT-9Nu" kind="presentation" identifier="goToPopHyper" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="5EJ-T6-iYp"/>
+                        <segue destination="3Gd-Yu-Bk0" kind="presentation" identifier="goToPopAnxiety" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="mUc-5G-xOa"/>
+                        <segue destination="tMk-I2-Umk" kind="presentation" identifier="goToPopPTSD" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="g6F-F2-GMl"/>
+                        <segue destination="h72-dR-FF5" kind="presentation" identifier="goToPopOCD" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="q8L-X6-ikq"/>
+                        <segue destination="rEH-gv-E6e" kind="presentation" identifier="goToPopBipolar" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Ig1-gS-yUV"/>
+                        <segue destination="oDq-MG-a9b" kind="presentation" identifier="goToProfileImage" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Ggj-p2-hjq"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXS-1H-yI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045.5999999999999" y="-610.34482758620697"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="ygc-Tq-xnE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="uX8-TV-9YE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="To2-eh-5Vz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FW-B9-ljB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869" y="-469"/>
+        </scene>
+        <!--Depression Pop Up View Controller-->
+        <scene sceneID="BZ3-ea-r9Z">
+            <objects>
+                <viewController id="KgI-EW-cpf" customClass="DepressionPopUpViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jH7-UE-yS3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7T-NO-CfY">
+                                <rect key="frame" x="25" y="176" width="325" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thoughtDepression" translatesAutoresizingMaskIntoConstraints="NO" id="F2J-Up-vdZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="233"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.11296018835616438" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jeS-f7-YAI">
+                                        <rect key="frame" x="0.0" y="215" width="325" height="255"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Aurel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jU-4l-uKf">
+                                                <rect key="frame" x="129" y="47" width="66" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Depression" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf1-0n-acQ">
+                                                <rect key="frame" x="0.0" y="18" width="325" height="27"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrH-tX-zKB">
+                                                <rect key="frame" x="0.0" y="89" width="325" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Depression (major depressive disorder) is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. Fortunately, it is also treatable. Depression causes feelings of sadness and/or a loss of interest in activities once enjoyed. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEp-oY-2zQ">
+                                                <rect key="frame" x="119" y="225" width="86" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Join" image="login">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="joinPressed:" destination="KgI-EW-cpf" eventType="touchUpInside" id="9Xp-fp-jVa"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTY-P2-imP">
+                                                <rect key="frame" x="0.0" y="73" width="325" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="depression-1" translatesAutoresizingMaskIntoConstraints="NO" id="7kc-W0-Iox">
+                                                <rect key="frame" x="112" y="-83" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50449486301369861" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="WWx-dn-OvD"/>
+                    </view>
+                    <connections>
+                        <outlet property="depressionCard" destination="m7T-NO-CfY" id="gcz-Oq-QFd"/>
+                        <outlet property="depressionImageView" destination="7kc-W0-Iox" id="LwY-1D-5al"/>
+                        <outlet property="joinButton" destination="iEp-oY-2zQ" id="TNS-BZ-Igk"/>
+                        <outlet property="memberCounter" destination="xTY-P2-imP" id="Aza-pC-Sxb"/>
+                        <outlet property="outerCard" destination="jH7-UE-yS3" id="lb5-pP-HBP"/>
+                        <outlet property="thoughtDepressionImage" destination="F2J-Up-vdZ" id="baO-XT-QHB"/>
+                        <outlet property="viewCard" destination="jeS-f7-YAI" id="wFa-Jw-XnE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMx-rI-Ula" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2640.8000000000002" y="-981.2807881773399"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="crV-LT-Z8c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Qv-Vr-G6f" customClass="LightContentNavigationController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="chat glyph" id="jWe-XJ-Jay"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vdb-kY-Iom">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.83529411760000005" green="0.12941176469999999" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.83529411764705885" green="0.12941176469999999" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pw4-SB-d5o" kind="relationship" relationship="rootViewController" id="UDL-gk-i2m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8y-WF-vbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="174"/>
+        </scene>
+        <!--Support Groups-->
+        <scene sceneID="s8u-Km-M9j">
+            <objects>
+                <tableViewController storyboardIdentifier="listTabelController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pw4-SB-d5o" customClass="ListTableViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" id="5LV-qO-QN8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.70032826039999996" blue="0.42979337569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" editingAccessoryType="disclosureIndicator" rowHeight="124" id="AzC-19-Fwg" customClass="ListTableViewCell" customModule="Mentrely" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="124"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AzC-19-Fwg" id="xtq-pe-hMc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrS-ei-Er3">
+                                            <rect key="frame" x="8" y="11" width="359" height="107"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHw-zN-FKv">
+                                                    <rect key="frame" x="109" y="8" width="37.333333333333343" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOe-tJ-bo9">
+                                                    <rect key="frame" x="150.33333333333334" y="8" width="0.0" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-Ai-Kbf">
+                                                    <rect key="frame" x="113" y="34" width="218" height="46"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.84999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b48-VF-xAY">
+                                                    <rect key="frame" x="351" y="8" width="0.0" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="tCi-dC-OaD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd3-ZX-kQt">
+                                                    <rect key="frame" x="331" y="37" width="20" height="20"/>
+                                                    <color key="backgroundColor" white="0.94995471009999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="Z9k-AJ-g5s"/>
+                                                        <constraint firstAttribute="height" constant="20" id="vQn-yS-Syz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDo-6R-h76">
+                                                    <rect key="frame" x="113" y="74" width="238" height="15.666666666666671"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15.666666666666657" id="RzQ-k4-PY5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="0.70032826039999996" blue="0.42979337569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.78503960698356168" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="wfm-Ai-Kbf" firstAttribute="width" relation="lessThanOrEqual" secondItem="jrS-ei-Er3" secondAttribute="width" multiplier="0.662953" id="5Rx-8r-nGu"/>
+                                                <constraint firstItem="UHw-zN-FKv" firstAttribute="top" secondItem="jrS-ei-Er3" secondAttribute="top" constant="8" id="6X1-Lx-wEJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="b48-VF-xAY" secondAttribute="trailing" constant="8" id="AUU-x0-Spf"/>
+                                                <constraint firstItem="wfm-Ai-Kbf" firstAttribute="width" secondItem="jrS-ei-Er3" secondAttribute="width" multiplier="0.607242" id="AhA-wx-3YO"/>
+                                                <constraint firstItem="UHw-zN-FKv" firstAttribute="leading" secondItem="jrS-ei-Er3" secondAttribute="leading" constant="109" id="ELu-VE-iPD"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zd3-ZX-kQt" secondAttribute="trailing" constant="8" id="KwJ-oG-Fby"/>
+                                                <constraint firstAttribute="bottom" secondItem="TDo-6R-h76" secondAttribute="bottom" constant="17.333333333333329" id="NcG-6L-aLU"/>
+                                                <constraint firstItem="TDo-6R-h76" firstAttribute="leading" secondItem="jrS-ei-Er3" secondAttribute="leading" constant="113" id="OPR-KX-vBw"/>
+                                                <constraint firstItem="wfm-Ai-Kbf" firstAttribute="leading" secondItem="jrS-ei-Er3" secondAttribute="leading" constant="113" id="STc-uB-Mc1"/>
+                                                <constraint firstItem="b48-VF-xAY" firstAttribute="top" secondItem="jrS-ei-Er3" secondAttribute="top" constant="8" id="T6X-0H-MvY"/>
+                                                <constraint firstAttribute="bottom" secondItem="KOe-tJ-bo9" secondAttribute="bottom" constant="79" id="Y5V-4w-dfO"/>
+                                                <constraint firstItem="Zd3-ZX-kQt" firstAttribute="top" secondItem="jrS-ei-Er3" secondAttribute="top" constant="37" id="az5-TQ-AdG"/>
+                                                <constraint firstAttribute="trailing" secondItem="TDo-6R-h76" secondAttribute="trailing" constant="8" id="bZz-m8-OHf"/>
+                                                <constraint firstItem="KOe-tJ-bo9" firstAttribute="top" secondItem="jrS-ei-Er3" secondAttribute="top" constant="8" id="fVj-NC-Wmx"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zd3-ZX-kQt" secondAttribute="bottom" constant="50" id="gCV-1a-cnS"/>
+                                                <constraint firstItem="KOe-tJ-bo9" firstAttribute="leading" secondItem="UHw-zN-FKv" secondAttribute="trailing" constant="4" id="t9l-rA-9SF"/>
+                                                <constraint firstItem="wfm-Ai-Kbf" firstAttribute="top" secondItem="jrS-ei-Er3" secondAttribute="top" constant="34" id="vOm-PE-SGW"/>
+                                                <constraint firstItem="Zd3-ZX-kQt" firstAttribute="leading" secondItem="jrS-ei-Er3" secondAttribute="leading" constant="331" id="z6Y-AF-MSw"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hdd-RP-01p">
+                                            <rect key="frame" x="16" y="21" width="87" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="85" id="VDC-aS-TMP"/>
+                                                <constraint firstAttribute="width" constant="87" id="pcX-lh-XO0"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jrS-ei-Er3" secondAttribute="bottom" constant="6" id="CTK-Tk-Ycf"/>
+                                        <constraint firstItem="jrS-ei-Er3" firstAttribute="top" secondItem="xtq-pe-hMc" secondAttribute="top" constant="11" id="PQL-mQ-pov"/>
+                                        <constraint firstAttribute="trailing" secondItem="jrS-ei-Er3" secondAttribute="trailing" constant="8" id="TFi-S9-jXR"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hdd-RP-01p" secondAttribute="bottom" constant="7" id="TPk-Yg-aDr"/>
+                                        <constraint firstItem="hdd-RP-01p" firstAttribute="leading" secondItem="xtq-pe-hMc" secondAttribute="leadingMargin" id="XNb-07-185"/>
+                                        <constraint firstItem="hdd-RP-01p" firstAttribute="top" secondItem="xtq-pe-hMc" secondAttribute="topMargin" constant="10" id="bKm-db-xcu"/>
+                                        <constraint firstItem="jrS-ei-Er3" firstAttribute="leading" secondItem="xtq-pe-hMc" secondAttribute="leading" constant="8" id="ydQ-4w-dPj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="backgroundCard" destination="jrS-ei-Er3" id="g7S-bj-tRW"/>
+                                    <outlet property="chatCounter" destination="Zd3-ZX-kQt" id="HnX-xv-x51"/>
+                                    <outlet property="imageDoctornya" destination="hdd-RP-01p" id="j8i-kt-NLa"/>
+                                    <outlet property="lastChatLabel" destination="b48-VF-xAY" id="qlw-bv-iJQ"/>
+                                    <outlet property="memberLabel" destination="KOe-tJ-bo9" id="3Ul-2M-HTp"/>
+                                    <outlet property="namaDoktor" destination="TDo-6R-h76" id="Xke-F7-bIt"/>
+                                    <outlet property="namaPenyakit" destination="UHw-zN-FKv" id="uu0-C4-DHM"/>
+                                    <outlet property="previewChatLabel" destination="wfm-Ai-Kbf" id="0T8-Wa-c0K"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pw4-SB-d5o" id="RLd-Jw-bcj"/>
+                            <outlet property="delegate" destination="pw4-SB-d5o" id="Ztb-aT-aku"/>
+                            <outlet property="prefetchDataSource" destination="pw4-SB-d5o" id="jT7-BF-Rrg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Support Groups" id="JGL-Ft-eMM"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="375" height="812"/>
+                    <connections>
+                        <segue destination="uX8-TV-9YE" kind="presentation" identifier="present" id="6Rg-Bx-CYe"/>
+                        <segue destination="KgI-EW-cpf" kind="presentation" identifier="goToPopDepression" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="mTw-cL-n03"/>
+                        <segue destination="jid-OT-9Nu" kind="presentation" identifier="goToPopHyper" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="nd6-Kd-NG8"/>
+                        <segue destination="rEH-gv-E6e" kind="presentation" identifier="goToPopBipolar" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="5gt-YD-drp"/>
+                        <segue destination="3Gd-Yu-Bk0" kind="presentation" identifier="goToPopAnxiety" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="RIn-VD-zBi"/>
+                        <segue destination="h72-dR-FF5" kind="presentation" identifier="goToPopOCD" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="g22-PV-kIf"/>
+                        <segue destination="tMk-I2-Umk" kind="presentation" identifier="goToPopPTSD" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Anz-S0-TWi"/>
+                        <segue destination="6TY-Zb-WiM" kind="show" identifier="depressionSegue" id="qWr-fu-K3G"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vU1-T4-BsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285.5999999999999" y="145.56650246305421"/>
+        </scene>
+        <!--Hyper Activity Pop View Controller-->
+        <scene sceneID="Tte-qD-U4h">
+            <objects>
+                <viewController id="jid-OT-9Nu" customClass="HyperActivityPopViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I9V-HF-uzU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5e-FM-t0n">
+                                <rect key="frame" x="25" y="176" width="325" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hyper" translatesAutoresizingMaskIntoConstraints="NO" id="hwI-mw-MoL">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="233"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.11296018839999999" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8um-2K-UwV">
+                                        <rect key="frame" x="0.0" y="215" width="325" height="266"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Bianca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rft-qu-Xui">
+                                                <rect key="frame" x="123" y="50" width="78" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hyperactivity " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6Q-i5-WhU">
+                                                <rect key="frame" x="0.0" y="20" width="325" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-eY-gLW">
+                                                <rect key="frame" x="0.0" y="96" width="325" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Hyperactivity is a state of being unusually or abnormally active. It’s often difficult to manage for people around the person who’s hyperactive, such as teachers, employers, and parents. The symptoms appear before a person is twelve years old.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogR-Ws-d7W">
+                                                <rect key="frame" x="119.66666666666666" y="221" width="86" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Join" image="login">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="joinButtonPressed:" destination="jid-OT-9Nu" eventType="touchUpInside" id="jJS-nR-E3J"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5x-MT-iru">
+                                                <rect key="frame" x="0.0" y="79" width="325" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ADHD" translatesAutoresizingMaskIntoConstraints="NO" id="X5a-St-205">
+                                        <rect key="frame" x="112" y="133" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50449486300000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="YUR-qw-ErP"/>
+                    </view>
+                    <connections>
+                        <outlet property="hyperCard" destination="X5e-FM-t0n" id="FiS-Km-BCd"/>
+                        <outlet property="hyperImageView" destination="X5a-St-205" id="DMc-5i-oPR"/>
+                        <outlet property="hyperTopImage" destination="hwI-mw-MoL" id="NwC-dO-Ozs"/>
+                        <outlet property="joinButton" destination="ogR-Ws-d7W" id="qG9-mF-BU5"/>
+                        <outlet property="memberCounter" destination="x5x-MT-iru" id="4sw-Oq-x6w"/>
+                        <outlet property="outerCard" destination="I9V-HF-uzU" id="lQk-h1-SYI"/>
+                        <outlet property="viewCard" destination="8um-2K-UwV" id="Bkf-2m-XDH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGN-Sj-yg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="-1308"/>
+        </scene>
+        <!--Bipolar Pop View Controller-->
+        <scene sceneID="Afd-uF-J1b">
+            <objects>
+                <viewController id="rEH-gv-E6e" customClass="BipolarPopViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v8t-jm-iu1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1U-nK-rOI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAR-MQ-zEX">
+                                <rect key="frame" x="25" y="176" width="325" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bipolar2" translatesAutoresizingMaskIntoConstraints="NO" id="DaZ-Bg-dlY">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="233"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.11296018839999999" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ee-iM-9fr">
+                                        <rect key="frame" x="0.0" y="215" width="325" height="266"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bipolar " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmy-0U-HbP">
+                                                <rect key="frame" x="0.0" y="20" width="325" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSn-v3-hnd">
+                                                <rect key="frame" x="0.0" y="96" width="325" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Bipolar disorder, previously known as manic depression, is a mental disorder that causes periods of depression and periods of abnormally elevated mood. The elevated mood is significant and is known as mania, or hypomania if less severe and symptoms of psychosis are absent. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lg-jM-2B6">
+                                                <rect key="frame" x="119.66666666666666" y="221" width="86" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Join" image="login">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="joinPressed:" destination="rEH-gv-E6e" eventType="touchUpInside" id="NVl-f5-xF9"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87X-Rs-JEd">
+                                                <rect key="frame" x="0.0" y="79" width="325" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Hermawan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTN-8c-SIT">
+                                                <rect key="frame" x="108" y="50" width="108" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bipolar" translatesAutoresizingMaskIntoConstraints="NO" id="WrD-Q0-Pmn">
+                                        <rect key="frame" x="112" y="133" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50449486300000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="1gs-2o-bSK"/>
+                    </view>
+                    <connections>
+                        <outlet property="bipolarCard" destination="JAR-MQ-zEX" id="VkT-XS-RME"/>
+                        <outlet property="bipolarImageView" destination="WrD-Q0-Pmn" id="MoT-Pe-oVF"/>
+                        <outlet property="bipolarTopImageView" destination="DaZ-Bg-dlY" id="UHS-IB-kXd"/>
+                        <outlet property="cardView" destination="1ee-iM-9fr" id="Hxu-8C-scd"/>
+                        <outlet property="joinButton" destination="5Lg-jM-2B6" id="NkQ-CA-pms"/>
+                        <outlet property="memberCounter" destination="87X-Rs-JEd" id="Reb-yE-b4U"/>
+                        <outlet property="outerCard" destination="x1U-nK-rOI" id="chL-RF-qWQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hu7-tn-Av1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3074" y="-317"/>
+        </scene>
+        <!--Anxiety Pop View Controller-->
+        <scene sceneID="Sdb-ke-G6I">
+            <objects>
+                <viewController id="3Gd-Yu-Bk0" customClass="AnxietyPopViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XqE-dP-YLH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="935-hf-vjJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUc-oB-8zN">
+                                <rect key="frame" x="25" y="176" width="325" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Anxiety" translatesAutoresizingMaskIntoConstraints="NO" id="WMj-q0-GKP">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="233"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.11296018839999999" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6B5-u3-nmF">
+                                        <rect key="frame" x="0.0" y="215" width="325" height="266"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anxiety" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8n-SP-sRb">
+                                                <rect key="frame" x="0.0" y="20" width="325" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42n-Cq-go1">
+                                                <rect key="frame" x="0.0" y="96" width="325" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Anxiety disorders affect 40 million people in the United States. It is the most common group of mental illnesses in the country. However, only 36.9 percent of people with an anxiety disorder receive treatment.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLn-ra-XoC">
+                                                <rect key="frame" x="119.66666666666666" y="221" width="86" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Join" image="login">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="joinPressed:" destination="3Gd-Yu-Bk0" eventType="touchUpInside" id="HEY-t9-p3f"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOs-Vh-EzD">
+                                                <rect key="frame" x="0.0" y="79" width="325" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Agatha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7P-cZ-Hm0">
+                                                <rect key="frame" x="122" y="50" width="81" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="anxietyProfile" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-Q0-3Xy">
+                                        <rect key="frame" x="112" y="133" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50449486300000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="BYW-IA-nKD"/>
+                    </view>
+                    <connections>
+                        <outlet property="AnxietyCard" destination="hUc-oB-8zN" id="30P-Ik-erH"/>
+                        <outlet property="AnxietyImageView" destination="qzO-Q0-3Xy" id="5Rx-2b-4fS"/>
+                        <outlet property="AnxietyTopImageView" destination="WMj-q0-GKP" id="Id7-vb-ch6"/>
+                        <outlet property="cardView" destination="6B5-u3-nmF" id="Qqa-EF-A7g"/>
+                        <outlet property="joinButton" destination="KLn-ra-XoC" id="2pg-IC-bJ4"/>
+                        <outlet property="memberCounter" destination="NOs-Vh-EzD" id="Fzd-SM-wFg"/>
+                        <outlet property="outerCard" destination="935-hf-vjJ" id="B1J-At-Abt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBj-Tr-sYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="-1396"/>
+        </scene>
+        <!--Pop View Controller-->
+        <scene sceneID="k2a-dc-Gpm">
+            <objects>
+                <viewController id="h72-dR-FF5" customClass="OCDPopViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s6W-PU-DT5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LM8-Ad-Bmq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prW-4v-xSw">
+                                <rect key="frame" x="25" y="176" width="325" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OCD-1" translatesAutoresizingMaskIntoConstraints="NO" id="TEJ-jk-nqw">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="233"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.11296018839999999" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dM8-gF-pnq">
+                                        <rect key="frame" x="0.0" y="215" width="325" height="266"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Obsessive Compulsive Disorder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YB-Rs-2iO">
+                                                <rect key="frame" x="0.0" y="20" width="325" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWt-nU-km0">
+                                                <rect key="frame" x="0.0" y="96" width="325" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Obsessive-Compulsive Disorder (OCD) is a common, chronic and long-lasting disorder in which a person has uncontrollable, reoccurring thoughts (obsessions) and behaviors (compulsions) that he or she feels the urge to repeat over and over.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-9F-a5z">
+                                                <rect key="frame" x="119.66666666666666" y="221" width="86" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Join" image="login">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="joinPressed:" destination="h72-dR-FF5" eventType="touchUpInside" id="7cz-Ft-4d3"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLU-PN-aD3">
+                                                <rect key="frame" x="0.0" y="79" width="325" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Aurel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xv7-pg-s3x">
+                                                <rect key="frame" x="129" y="50" width="66" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OCD" translatesAutoresizingMaskIntoConstraints="NO" id="ru2-xA-LXX">
+                                        <rect key="frame" x="112" y="133" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50449486300000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="C5h-Ac-X1k"/>
+                    </view>
+                    <connections>
+                        <outlet property="OCDCard" destination="prW-4v-xSw" id="F7k-jh-afr"/>
+                        <outlet property="bipolarImageView" destination="ru2-xA-LXX" id="ATn-cV-Hr9"/>
+                        <outlet property="bipolarTopImageView" destination="TEJ-jk-nqw" id="o9F-HS-stA"/>
+                        <outlet property="cardView" destination="dM8-gF-pnq" id="xaJ-oe-hWB"/>
+                        <outlet property="joinButton" destination="rgj-9F-a5z" id="kde-T9-O7g"/>
+                        <outlet property="memberCounter" destination="rLU-PN-aD3" id="aje-wT-siI"/>
+                        <outlet property="outerCard" destination="LM8-Ad-Bmq" id="yIR-67-AfQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZB-jP-lrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="174"/>
+        </scene>
+        <!--Pop View Controller-->
+        <scene sceneID="P2W-5o-ggY">
+            <objects>
+                <viewController id="tMk-I2-Umk" customClass="PTSDPopViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GoN-kH-wJy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YfA-bN-9Cz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mi2-3Z-5iG">
+                                <rect key="frame" x="25" y="176" width="325" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PTSD-1" translatesAutoresizingMaskIntoConstraints="NO" id="x5c-Kl-CxJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="233"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.11296018839999999" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="An1-YL-FuU">
+                                        <rect key="frame" x="0.0" y="215" width="325" height="266"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Traumatic Stress Disorder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuz-79-As6">
+                                                <rect key="frame" x="0.0" y="20" width="325" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyQ-Pi-4zh">
+                                                <rect key="frame" x="0.0" y="96" width="325" height="117"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Post-traumatic stress disorder (PTSD) is a mental health condition that's triggered by a terrifying event — either experiencing it or witnessing it. Symptoms may include flashbacks, nightmares and severe anxiety, as well as uncontrollable thoughts about the event.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUd-ZZ-qZF">
+                                                <rect key="frame" x="119.66666666666666" y="221" width="86" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Join" image="login">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="joinPressed:" destination="tMk-I2-Umk" eventType="touchUpInside" id="TlP-Qi-loo"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAG-Ys-OwD">
+                                                <rect key="frame" x="0.0" y="79" width="325" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr.Stefan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1N-af-WCp">
+                                                <rect key="frame" x="129" y="50" width="72" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PTSDProfile" translatesAutoresizingMaskIntoConstraints="NO" id="VS2-JD-80K">
+                                        <rect key="frame" x="112" y="133" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50449486300000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ovz-fo-43a"/>
+                    </view>
+                    <connections>
+                        <outlet property="PTSDCard" destination="mi2-3Z-5iG" id="3rF-lR-MOC"/>
+                        <outlet property="PTSDImageView" destination="VS2-JD-80K" id="lgD-wt-kCT"/>
+                        <outlet property="PTSDTopImageView" destination="x5c-Kl-CxJ" id="YKZ-tB-ame"/>
+                        <outlet property="cardView" destination="An1-YL-FuU" id="Ckv-Mp-Xxc"/>
+                        <outlet property="joinButton" destination="QUd-ZZ-qZF" id="9yH-SG-MHg"/>
+                        <outlet property="memberCounter" destination="KAG-Ys-OwD" id="hRL-Mo-hJR"/>
+                        <outlet property="outerCard" destination="YfA-bN-9Cz" id="rBL-7O-B6E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMX-uq-BYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="-610"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="L8v-fg-bWI">
+            <objects>
+                <viewController id="oDq-MG-a9b" customClass="ProfileViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Su4-la-iZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ibx-S8-cbK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ml-P7-wC0">
+                                        <rect key="frame" x="62" y="281" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fO9-vN-9ld">
+                                                <rect key="frame" x="85" y="55" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79d-Ce-2AB">
+                                                <rect key="frame" x="0.0" y="167" width="250" height="15"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlv-rK-Jqb">
+                                                <rect key="frame" x="0.0" y="143" width="250" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1K-Sd-9Xl">
+                                                <rect key="frame" x="210" y="3" width="36" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dismissButton:" destination="oDq-MG-a9b" eventType="touchUpInside" id="ZJq-aG-jNG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50449486300000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="01W-Et-4gL"/>
+                    </view>
+                    <connections>
+                        <outlet property="mentalText" destination="79d-Ce-2AB" id="Fpu-R3-aBq"/>
+                        <outlet property="profileImageView" destination="fO9-vN-9ld" id="XGE-CA-nxr"/>
+                        <outlet property="usernameText" destination="Tlv-rK-Jqb" id="ndI-I2-2ot"/>
+                        <segue destination="M12-mg-HM2" kind="presentation" identifier="goToFullscreen" id="CEb-Qi-u5c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dos-bB-NQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288.80000000000001" y="-678.32512315270935"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ADHD" width="181" height="156"/>
+        <image name="Anxiety" width="4480" height="6720"/>
+        <image name="Bipolar" width="197" height="165"/>
+        <image name="Bipolar2" width="6000" height="4000"/>
+        <image name="Hyper" width="2338" height="3507"/>
+        <image name="OCD" width="185" height="168"/>
+        <image name="OCD-1" width="5578" height="3486"/>
+        <image name="PTSD-1" width="5004" height="3264"/>
+        <image name="PTSDProfile" width="5616" height="3744"/>
+        <image name="anxietyProfile" width="3456" height="5184"/>
+        <image name="chat glyph" width="30" height="30"/>
+        <image name="depression-1" width="3200" height="4800"/>
+        <image name="login" width="30" height="30"/>
+        <image name="thoughtDepression" width="3456" height="2304"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="g6F-F2-GMl"/>
+        <segue reference="q8L-X6-ikq"/>
+        <segue reference="mUc-5G-xOa"/>
+        <segue reference="Ig1-gS-yUV"/>
+        <segue reference="5EJ-T6-iYp"/>
+        <segue reference="dzc-x7-uQQ"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

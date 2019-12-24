@@ -9,7 +9,8 @@
 import UIKit
 
 class LogCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var logName: UILabel!
- 
+    override func awakeFromNib() {
+            //logName.layer.cornerRadius = 10
+    }
 }

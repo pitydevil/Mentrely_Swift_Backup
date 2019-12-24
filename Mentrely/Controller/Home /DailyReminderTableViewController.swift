@@ -16,13 +16,25 @@ var reminderRealm : Results<reminder>?
 let realm = try! Realm()
 
     @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
             loadItems()
             tableView.rowHeight = 60
             searchBar.barTintColor = UIColor.purple
-           
+            searchBar.delegate = self
+        
+    
+        // tapGesture to return to table when tapped
+        
+        let tapped = UITapGestureRecognizer(target: self, action: #selector(self.handleTapped))
+        tapped.numberOfTouchesRequired = 1
+    tapped.addTarget(self,action:#selector(self.handleTapped))
+        tableView.addGestureRecognizer(tapped)
+    }
+    @IBAction func refreshControl(_ sender: UIRefreshControl) {
+        tableView.reloadData()
     }
     
 
@@ -34,19 +46,13 @@ let realm = try! Realm()
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SwipeTableViewCell
-
         cell.delegate = self
         cell.textLabel?.text = reminderRealm?[indexPath.row].daily ?? "Add a daily Reminder"
-
         if reminderRealm?[indexPath.item].done == true {
-
             cell.accessoryType = .checkmark
-
         } else {
-
             cell.accessoryType = .none
         }
-
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -55,34 +61,30 @@ let realm = try! Realm()
                  try realm.write {
 
                 if reminderRealm?[indexPath.item].done == false {
-
                     reminderRealm?[indexPath.item].done = true
 
                     print("trued")
 
                     } else {
-
                reminderRealm?[indexPath.item].done = false
-
                     print("falsed")
                             }
                         }
+                
                     } catch {
                 print("error \(error)")
-
                 }
 
                 tableView.reloadData()
                 tableView.deselectRow(at: indexPath, animated: true)
-            }
+    }
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }
 
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-
-        self.updateModel(at: indexPath)
-
+          
+                self.updateModel(at: indexPath)
     }
 
     // customize the action appearance
@@ -103,17 +105,16 @@ let realm = try! Realm()
     // MARK: -- UPDATE MODEL FOR DELETING
 
     func updateModel(at indexpath: IndexPath) {
-
-             if let reminderForDeletion = self.reminderRealm?[indexpath.row] {
-        do {
-            try self.realm.write {
-                self.realm.delete(reminderForDeletion)
-                }
-                    } catch {
-                    print("error \(error)")
+            if let reminderForDeletion = self.reminderRealm?[indexpath.row] {
+                do {
+                    try self.realm.write {
+                        self.realm.delete(reminderForDeletion)
                     }
+                } catch {
+                    print("error \(error)")
                 }
             }
+    }
 
 
     @IBAction func addButton(_ sender: UIBarButtonItem) {
@@ -148,9 +149,8 @@ let realm = try! Realm()
 
         }
 
-        let cancel = UIAlertAction(title: "Cancel", style: .default) { (UIAlertAction) in
-
-                print("Canceled")
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive) { (UIAlertAction) in
+               return
             }
 
         alert.addAction(cancel)
@@ -168,11 +168,8 @@ let realm = try! Realm()
             realm.add(reminder)
                 }
             }
-
         catch {
-
             print("error saving context \(error)")
-
             }
         }
 
@@ -182,30 +179,31 @@ let realm = try! Realm()
         tableView.reloadData()
 
         }
+    @objc func handleTapped(gesture: UITapGestureRecognizer) {
+          searchBar.resignFirstResponder()
+    }
+   
 }
     // MARK: -- EXTENSION UNTUK SEARCHBAR DELEGATE
 
 extension DailyReminderTableViewController : UISearchBarDelegate{
-
-
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 
         reminderRealm = reminderRealm?.filter("daily CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "daily", ascending: true)
-
+        searchBar.sizeToFit()
         tableView.reloadData()
     }
-
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
           if searchBar.text?.count == 0 {
-
             loadItems()
-
               DispatchQueue.main.async {
                 searchBar.resignFirstResponder()
             }
         }
     }
+    
 
 
 
