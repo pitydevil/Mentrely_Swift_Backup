@@ -17,19 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="revisedFinalMentrely" translatesAutoresizingMaskIntoConstraints="NO" id="96n-NI-woc">
-                                <rect key="frame" x="102" y="356" width="170" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="8SN-uQ-VzZ"/>
-                                    <constraint firstAttribute="height" constant="100" id="Vrd-td-jM3"/>
-                                </constraints>
+                                <rect key="frame" x="137.66666666666666" y="356" width="100" height="100"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="96n-NI-woc" secondAttribute="bottom" constant="322" id="TvB-mU-DBY"/>
-                            <constraint firstItem="96n-NI-woc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="312" id="nW0-2f-4yZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="96n-NI-woc" secondAttribute="trailing" constant="103" id="xkk-dj-LYb"/>
-                            <constraint firstItem="96n-NI-woc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="ysr-eW-Lnz"/>
+                            <constraint firstItem="96n-NI-woc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7r8-7Y-oIl"/>
+                            <constraint firstItem="96n-NI-woc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="med-co-Lio"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

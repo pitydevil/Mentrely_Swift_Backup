@@ -13,22 +13,26 @@ class LightContentNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
             navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-            navBarAppearance.backgroundColor = UIColor("#D52192")
+            navBarAppearance.backgroundColor = UIColor("#FF9300")
+            navBarAppearance.shadowColor = .clear
+            navigationBar.shadowImage = UIImage()
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
             navigationBar.standardAppearance = navBarAppearance
             navigationBar.scrollEdgeAppearance = navBarAppearance
         }
+       
+         self.navigationController?.navigationBar.isTranslucent = false
+         self.navigationController?.navigationBar.barStyle = .default
+         self.navigationController?.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
-
-
+ 
 }

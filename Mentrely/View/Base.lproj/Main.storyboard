@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c8V-Fd-jQR">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLh-yK-OUE">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,36 +12,47 @@
         <scene sceneID="mVn-Gh-Qpo">
             <objects>
                 <viewControllerPlaceholder storyboardName="About" id="x8W-Pm-m8J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="V1T-SU-S5e"/>
+                    <tabBarItem key="tabBarItem" id="V1T-SU-S5e"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zp-50-7hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485" y="-143"/>
+            <point key="canvasLocation" x="478" y="-187"/>
         </scene>
         <!--Chat-->
         <scene sceneID="Zwz-Zx-D5g">
             <objects>
                 <viewControllerPlaceholder storyboardName="Chat" id="VcW-zb-zJE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="sO9-4t-Gb5"/>
+                    <tabBarItem key="tabBarItem" title="" id="sO9-4t-Gb5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qy7-Di-IwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485" y="-181"/>
+            <point key="canvasLocation" x="475" y="-227"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="rGw-e9-VbP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" id="Dxi-dX-vCU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tu8-bQ-ixP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qa8-0o-W9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="-277"/>
         </scene>
         <!--Home-->
         <scene sceneID="8BD-1i-MF7">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="aK9-eC-oBl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Help" id="GCd-9I-xoz"/>
+                    <tabBarItem key="tabBarItem" title="" id="GCd-9I-xoz"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bht-Pw-tiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="-216"/>
+            <point key="canvasLocation" x="477" y="-327"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="YqW-ft-pvI">
             <objects>
                 <tabBarController id="c8V-Fd-jQR" customClass="TabViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NZB-fY-f0a"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zpW-WP-ejr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -50,13 +60,50 @@
                     </tabBar>
                     <connections>
                         <segue destination="aK9-eC-oBl" kind="relationship" relationship="viewControllers" id="4cQ-EK-1cF"/>
-                        <segue destination="VcW-zb-zJE" kind="relationship" relationship="viewControllers" id="ZLy-gj-tWr"/>
-                        <segue destination="x8W-Pm-m8J" kind="relationship" relationship="viewControllers" id="xBw-Pv-jAW"/>
+                        <segue destination="Dxi-dX-vCU" kind="relationship" relationship="viewControllers" id="tdq-n7-QcJ"/>
+                        <segue destination="VcW-zb-zJE" kind="relationship" relationship="viewControllers" id="3Zz-Iq-bul"/>
+                        <segue destination="x8W-Pm-m8J" kind="relationship" relationship="viewControllers" id="4hZ-QI-jcr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR5-Qt-wuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-412" y="-227"/>
         </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="Egk-tK-Sdf">
+            <objects>
+                <viewController storyboardIdentifier="someController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cLh-yK-OUE" customClass="LoadingViewController" customModule="Mentrely" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V4k-Cs-XZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="revisedFinalMentrely" translatesAutoresizingMaskIntoConstraints="NO" id="sck-U6-uuR">
+                                <rect key="frame" x="137.66666666666666" y="356" width="100" height="100"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="H9k-CB-V5V">
+                                <rect key="frame" x="177.66666666666666" y="464" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H9k-CB-V5V" firstAttribute="centerY" secondItem="V4k-Cs-XZ3" secondAttribute="centerY" constant="68" id="Wzd-AM-i9i"/>
+                            <constraint firstItem="H9k-CB-V5V" firstAttribute="centerX" secondItem="V4k-Cs-XZ3" secondAttribute="centerX" id="mkO-cg-h2a"/>
+                            <constraint firstItem="sck-U6-uuR" firstAttribute="centerY" secondItem="V4k-Cs-XZ3" secondAttribute="centerY" id="oFj-xh-9dI"/>
+                            <constraint firstItem="sck-U6-uuR" firstAttribute="centerX" secondItem="V4k-Cs-XZ3" secondAttribute="centerX" id="vN6-f2-zwO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xdr-dD-0m3"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="H9k-CB-V5V" id="rqa-VI-BoJ"/>
+                        <segue destination="c8V-Fd-jQR" kind="presentation" identifier="goToMain" animates="NO" modalPresentationStyle="fullScreen" id="bzL-c8-805"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sg4-H9-Fat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1175" y="-188"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="revisedFinalMentrely" width="100" height="100"/>
+    </resources>
 </document>

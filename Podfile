@@ -7,20 +7,18 @@ target 'Mentrely' do
   use_frameworks!
 
   # Pods for Mentrely
-
-   pod 'SVProgressHUD'
-   pod 'Alamofire'
+   pod 'Alamofire', '~> 4.9.1'
    pod 'SwiftyJSON'
-   pod 'RealmSwift'
+   pod 'SDWebImage'
+   pod 'UIColor_Hex_Swift', '~> 5.0.0'
+   pod 'NVActivityIndicatorView'
    pod 'Firebase'
    pod 'Firebase/Auth'
    pod 'Firebase/Database'
    pod 'Firebase/Storage'
-   pod 'SDWebImage'
    pod 'GoogleSignIn'
-   pod 'UIColor_Hex_Swift', '~> 5.0.0'
    pod "TTGSnackbar"
-   pod 'Fabric'
-   pod 'TwitterKit'
-
+   pod 'TMPasscodeLock'
+   pod "UPCarouselFlowLayout"
+   
 end

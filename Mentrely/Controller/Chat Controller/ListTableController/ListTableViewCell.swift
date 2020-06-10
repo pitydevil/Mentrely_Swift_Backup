@@ -30,6 +30,5 @@ class ListTableViewCell: UITableViewCell {
         backgroundCard.layer.shadowRadius = 3
         chatCounter.layer.cornerRadius = chatCounter.frame.height/2
         chatCounter.clipsToBounds = true
-    
     }
 }

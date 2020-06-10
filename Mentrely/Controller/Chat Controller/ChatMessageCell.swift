@@ -16,7 +16,7 @@ class ChatMessageCell: UICollectionViewCell {
     var indexpath: Int = 0
     let textView: UITextView = {
         let tv = UITextView()
-        tv.text = "asdas"
+        tv.text = "text"
         tv.font = UIFont.systemFont(ofSize: 16)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.backgroundColor = UIColor.clear
@@ -24,7 +24,7 @@ class ChatMessageCell: UICollectionViewCell {
     }()
     let textViewNama: UITextView = {
           let tv = UITextView()
-          tv.text = "asdas"
+          tv.text = "namaUser"
           tv.font = UIFont.systemFont(ofSize: 16)
           tv.translatesAutoresizingMaskIntoConstraints = false
           tv.backgroundColor = UIColor.clear
@@ -33,7 +33,7 @@ class ChatMessageCell: UICollectionViewCell {
     
     let timeLabel : UILabel = {
        let label = UILabel()
-        label.text = "131231"
+        label.text = "time"
         label.font = UIFont.systemFont(ofSize: 12)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clear
@@ -66,8 +66,6 @@ class ChatMessageCell: UICollectionViewCell {
         sendButton.backgroundColor = UIColor.clear
         sendButton.translatesAutoresizingMaskIntoConstraints = false
         sendButton.setTitle("", for: .normal)
-       
-
         return sendButton
     }()
     
@@ -87,6 +85,7 @@ class ChatMessageCell: UICollectionViewCell {
         addSubview(textViewNama)
         addSubview(timeLabel)
         addSubview(profileButton)
+      
         
         bubbleViewRightAnchor = bubble.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8)
         bubbleViewRightAnchor?.isActive = true
@@ -109,14 +108,16 @@ class ChatMessageCell: UICollectionViewCell {
         timeLabel.bottomAnchor.constraint(equalTo: bubble.bottomAnchor, constant: 0).isActive = true
         timeLabel.widthAnchor.constraint(equalToConstant: 42).isActive = true
         timeLabel.heightAnchor.constraint(equalToConstant: 15).isActive = true
-       
+        timeLabel.font = UIFont.systemFont(ofSize: 9)
+        timeLabel.textColor =  UIColor.gray
+        
         //constrain TextViewMain
         textView.rightAnchor.constraint(equalTo: bubble.rightAnchor).isActive = true
         textView.leftAnchor.constraint(equalTo: bubble.leftAnchor, constant: 8).isActive = true
         textView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         textView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
         textView.isEditable = false
-        
+        textView.isSelectable = false
         
         //constrain profileImageView
         imageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
@@ -124,7 +125,7 @@ class ChatMessageCell: UICollectionViewCell {
         imageView.heightAnchor.constraint(equalToConstant: 32).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 32).isActive = true
         imageView.isHidden = true
-        
+
         //constrain imageButton
         profileButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
         profileButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -26).isActive = true
@@ -140,16 +141,15 @@ class ChatMessageCell: UICollectionViewCell {
         textViewNama.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
         textViewNama.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         textViewNama.isEditable = false
-        
     }
     
-   
     @IBAction private func doThisWhenButtonIsTapped(_ sender: Any) {
-            delegate?.indexpath(indexpath: self.indexpath)
+        if imageView.image != UIImage(named: "finalProfile") {
+              delegate?.indexpath(indexpath: self.indexpath)
+        }
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
-

@@ -9,12 +9,10 @@
 import Foundation
 
 class messageChat{
-    
     var text: String?
     var sender : String?
     var time: String?
     var userUID : String?
     var month : Int?
     var day   : Int?
-    var isRead : Bool?
 }
